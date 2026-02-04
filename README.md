@@ -7,6 +7,84 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Foods Prototype – Dish-First Food Discovery
+
+This repository contains an **early prototype** of a dish-first food discovery platform.
+The current implementation is built with **Laravel (PHP)**, but the core value is **framework-agnostic** and intended to be portable to **Node.js / API-first architectures**.
+
+---
+
+## 🍽️ Core Concept (Important for Node Team)
+
+**Dish-first, not restaurant-first**
+
+Instead of searching by restaurant names, users discover food by:
+- Dishes
+- Ingredients
+- Real photos
+- Community reviews
+- Location & availability
+
+Think:
+> “Show me this dish, where to eat it, what’s inside, and whether people actually like it.”
+
+---
+
+## 🧠 Product Pillars
+
+1. **Dish-first search**
+   - Search by dish names and menu items
+   - One dish → many restaurants
+
+2. **Photo-based reviews**
+   - Real photos from users
+   - Ratings attached to dishes (not only restaurants)
+
+3. **Map & open-now**
+   - Distance, directions, open hours
+   - Designed for geo-based queries
+
+4. **Ingredient insights (future)**
+   - Suggested ingredients
+   - Allergens (beta / coming soon)
+
+5. **Future ingredient marketplace**
+   - Ingredients can be added to cart
+   - One-click ordering (planned)
+
+---
+
+## 🧱 Current Tech (Prototype Only)
+
+- Backend: **Laravel**
+- Frontend: Blade + Tailwind
+- Database: MySQL
+- Purpose: **UI / UX + concept validation**
+
+⚠️ Laravel is **not a hard requirement** for the final system.
+
+---
+
+## 🧩 What Node Team Can Reuse
+
+### ✅ UX & Feature Flow
+- Landing page structure
+- Feature prioritization
+- Dish → Review → Location journey
+
+### ✅ Domain Model Ideas
+You can safely reuse these entities:
+
+```txt
+Dish
+Restaurant
+Review
+Photo
+Ingredient
+User
+Location
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
