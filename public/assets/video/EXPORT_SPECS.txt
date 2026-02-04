@@ -1,0 +1,26 @@
+============================================
+  Hero Video – Recommended Export Settings
+  (ใช้ export วิดีโอ 1.mp4–4.mp4 ให้ภาพไม่แตก)
+============================================
+
+Resolution:  1920 x 1080 (Full HD)
+Frame rate:  24 fps
+Bitrate:     5 Mbps (5000 kbps)
+Codec:       H.264 (AVC)
+Audio:       None (muted / no audio track)
+
+--------------------------------------------
+ตัวอย่างคำสั่ง FFmpeg (ถ้าใช้ command line):
+--------------------------------------------
+ffmpeg -i input.mp4 -vcodec libx264 -b:v 5M -r 24 -an -s 1920x1080 -pix_fmt yuv420p output.mp4
+
+--------------------------------------------
+โปรแกรมอื่น (Premiere / DaVinci / etc.):
+--------------------------------------------
+- Export format: H.264 / MP4
+- Resolution: 1920x1080
+- Frame rate: 24
+- Bitrate: 5 Mbps (VBR หรือ CBR)
+- Audio: ปิด / ไม่ export เสียง
+
+============================================
