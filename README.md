@@ -85,6 +85,63 @@ User
 Location
 
 
+# Foods Prototype – Dish-First Food Discovery
+
+This repository contains an early prototype of a dish-first food discovery platform. The current implementation is built with Laravel (PHP), but the core idea and product direction are framework-agnostic and intentionally designed to be portable to a Node.js / API-first architecture.
+
+## Core Concept
+
+Dish-first, not restaurant-first.
+
+Instead of searching by restaurant names, users discover food by dishes, ingredients, real photos, and community reviews, combined with location and availability data. The goal is to answer questions like: “What is this dish?”, “Where can I eat it nearby?”, “What’s inside it?”, and “Do people actually like it?”
+
+## Product Pillars
+
+Dish-first search allows users to search by menu items and dishes rather than business names. Photo-based reviews focus on real user-submitted photos and ratings tied directly to dishes. Map and open-now features provide distance, directions, and current opening status. Ingredient insights (planned) aim to surface suggested ingredients and allergen information. A future ingredient marketplace concept allows users to add ingredients to a cart and order them in one click.
+
+## Current Technology (Prototype Only)
+
+Backend is implemented using Laravel (PHP), frontend uses Blade and Tailwind CSS, and the database is MySQL. This codebase exists primarily for UI, UX, and product concept validation. Laravel is not a required technology for the final system.
+
+## What the Node Team Can Reuse
+
+This repository is most valuable as a reference for UX flow, feature prioritization, and domain modeling rather than implementation details. The following domain concepts are central to the product and can be reused directly:
+
+Dish, Restaurant, Review, Photo, Ingredient, User, and Location.
+
+Typical relationships include dishes belonging to multiple restaurants, reviews and photos attached to dishes, ingredients linked to dishes, and restaurants tied to geographic locations.
+
+## Suggested Node Architecture (Guideline)
+
+This prototype maps well to a Node.js backend using frameworks such as NestJS, Express, or Fastify. A service-based or modular architecture is recommended, for example: dish service, review service, media service, location service, and user service. REST or GraphQL APIs, a search engine (e.g. Meilisearch or Elasticsearch), and CDN-backed media storage are expected in later stages.
+
+## Project Structure (Current)
+
+The landing directory contains marketing and landing page UI. Resources include views and UI components. Public stores static assets such as images and videos. The database directory contains migrations that can be used as conceptual references for schema design.
+
+## How to Run (Optional)
+
+Install dependencies, generate the application key, run migrations, and start the development server:
+
+composer install  
+cp .env.example .env  
+php artisan key:generate  
+php artisan migrate  
+php artisan serve  
+
+## Status
+
+This project is a prototype intended for concept validation and handoff. It is not production-ready and is expected to be re-architected.
+
+## Final Note
+
+This repository exists to answer “What should we build?”, not “How exactly should it be built?”. The Node team is encouraged to freely redesign and implement the system based on these ideas.
+
+Owner: ETTH / Thathundol  
+Status: Prototype / Handoff
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
